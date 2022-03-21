@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Srisakdi&display=swap');
+        body{
+            font-family: 'Srisakdi', cursive;
+            font-size:x-large
+        }
+        </style>
+    <title>ดู บุตร์ จะ เลี้ยง ง่าย ฤา ยาก</title>
+</head>
+<body>
+    <br><br><br><br><br><br>
+    <center>
+    <h1>ดู บุตร์ จะ เลี้ยง ง่าย ฤา ยาก</h1>
+
+   ปีเดือนวันเกิดทารก : <input type="text" id="x" style="width:120px;height:25px"> 
+    เวลาเกิด :  <input type="text" id="y"  style="width:120px;height:25px">
+  
+  => <button class="cal" onsubmit="cal()" style="font-size:18px">ทำนาย</button>
+
+
+
+   
+    <br><br>
+    <b><div id="cal"></div></b>
+    <b><div id="text"></div></b>
+<p></p>
+<hr>
+<address>• สิทธิการิย ถ้า หยาก จะ รู้ ว่า ทารก นั้น จะ เลี้ยง ง่าย ฤา ยาก ท่า ให้ เอ่า จำนวน บื เดือน วัน ของ ทารก นั้น ตั้ง ลง เอาเวลา คุณ เอา ๘ หาร ถ้า เลศ ๑, ๓, ๕, ๗, เลี้ยง ยาก ถ้า เสศ ๒, ๔, ๖, เลี้ยง ง่าย ถ้า เสศ สูญ เลี้ยง ไม่รอด เลย</address>
+    </center>
+    <script>
+        function cal() {
+            result =   (x.value * y.value) / 8
+            result2 = String(result).charAt(0)
+            document.getElementById('cal').innerHTML= result2
+if (result2 == 1 || result2 == 3 || result2 == 5 || result2 == 7){
+document.getElementById('text').innerHTML= "เลี้ยง ยาก"
+} else if (result2 == 2 || result2 == 4 || result2 == 6){
+document.getElementById('text').innerHTML= "เลี้ยง ง่าย" 
+} else if (result2 == 0){
+document.getElementById('text').innerHTML= "เลี้ยง ไม่ รอด" 
+}
+}
+document.querySelector('.cal').addEventListener("click", ()=>cal());
+    </script>
+</body>
+</html>
